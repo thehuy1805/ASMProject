@@ -4,6 +4,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
 const employeeController = require('./controller/employeeController');
+const productController = require('./controller/productController');
+const loginController = require('./controller/loginController');
+
 
 var app = express();
 
@@ -24,9 +27,6 @@ app.engine('hbs', expressHandlebars({
     },
 }))
 
-app.get('/', function (req, res) {
-    res.send('Hello world')
-})
 app.set('view engine', 'hbs');
 
 const port = process.env.PORT || 3000
@@ -34,4 +34,7 @@ app.listen(port, () => {
     console.log("Server is listening on Port 3000");
 })
 
+app.use('/', loginController);
+app.use('/login', loginController);
 app.use('/employee', employeeController);
+app.use('/product', productController);

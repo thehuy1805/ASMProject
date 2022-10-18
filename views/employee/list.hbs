@@ -1,26 +1,32 @@
 <h3>
+     <p>Employee List</p>
     <a href="/employee" class="btn btn-danger">
         <i class="fa fa-plus"> </i> Create New
     </a>
-    Employee List
+   
+     <a href="/product/list" class="btn btn-danger">
+        <i class="fa fa-plus"> </i> List Product
+    </a>
 </h3>
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Full Name</th>
+            <th>Birth</th>
             <th>Email</th>
-            <th>Mobile</th>
-            <th>City</th>
+            <th>Number Phone</th>
+            <th>Address</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         {{#each list}}
         <tr>
-            <td>{{this.fullName}}</td>
-            <td>{{this.email}}</td>
-            <td>{{this.mobile}}</td>
-            <td>{{this.city}}</td>
+            <td>{{this.Name}}</td>
+            <td>{{this.Birth}}</td>
+            <td>{{this.Email}}</td>
+            <td>{{this.NumberPhone}}</td>
+            <td>{{this.Address}}</td>
             <td>
                 <a href="/employee/{{this._id}}">
                     <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
@@ -34,5 +40,8 @@
             </td>
         </tr>
         {{/each}}
+
+        <div>
+    </div>
     </tbody>
 </table>

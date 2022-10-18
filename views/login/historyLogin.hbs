@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+<form action="/login" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{login._id}}">
+
+
+    <div class="form-group">
+        <label>ID Login</label>
+        <input type="text" class="form-control" name="ID" value="{{login.ID}}" placeholder="ID">
+        <div class="text-danger">
+            {{password.IDError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="Password" value="{{login.NameProduct}}"
+            placeholder="Password">
+        <div class="text-danger">
+            {{login.Password}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Date</label>
+        <output type="hidden" class="form-control" name=a value="{{login.Date}}" placeholder="">
+            <div class="text-danger">
+                {{Date.Password}}
+            </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a href="/product/list"></a>
+    </div>
+</form>

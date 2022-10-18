@@ -1,0 +1,25 @@
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Password</th>
+            <th>Time</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.Password}}</td>
+            <td>{{this.Time}}</td>
+            <td>
+                <a href="/login/{{this._id}}">
+                    <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
