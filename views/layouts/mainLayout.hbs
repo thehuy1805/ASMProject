@@ -3,6 +3,7 @@
     <head>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <title>ATN Store</title>
         <style>
@@ -12,13 +13,23 @@
         </style>
     </head>
     <body class="bg-info">
-         <div style="background-color:rgb(183 220 238);padding:20px"> {{> header}} </div>
         <div class="row h-100 align-items-center">
-            <div style="margin-left:330px;background-color:white;margin-top:15px;padding:20px" class="col-md-6 offset-md-3">
+            <div style="margin-left:220px;margin-right:420px;background-color:rgb(183 220 238);margin-top:15px;padding:20px" class="col-md-7.5 offset-md-12">
+                {{> header}}
+            </div>
+        </div>
+
+        <div class="row h-100 align-items-center">
+            <div style="margin-left:330px;background-color:white;margin-top:15px;padding:20px" class="col-md-5 offset-md-3">
                 {{{body}}}
             </div>
         </div>
-        <div style="background-color:rgb(183 220 238);margin-top:15px;padding:20px"> {{> footer}} </div>
+
+        <div class="row h-100 align-items-center">
+            <div style="margin-left:220px;margin-right:420px;background-color:rgb(183 220 238);margin-top:15px;padding:20px" class="col-md-5.5 offset-md-6">
+                {{> footer}}
+            </div>
+        </div>
          
     </body>
 </html>

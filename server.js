@@ -6,6 +6,7 @@ const expressHandlebars = require('express-handlebars');
 const employeeController = require('./controller/employeeController');
 const productController = require('./controller/productController');
 const loginController = require('./controller/loginController');
+const ordersController = require('./controller/ordersController');
 
 
 var app = express();
@@ -36,5 +37,6 @@ app.listen(port, () => {
 
 app.use('/', loginController);
 app.use('/login', loginController);
+app.use('/orders', ordersController);
 app.use('/employee', employeeController);
 app.use('/product', productController);

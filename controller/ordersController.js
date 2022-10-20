@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Login = mongoose.model('Login');
+const Orders = mongoose.model('Orders');
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("login/historyLogin", {
-        viewTitle: "Login"
+    res.render("orders/addOrEditOrders", {
+        viewTitle: "Order Insert"
     })
 })
 
@@ -19,19 +19,19 @@ router.post("/", (req, res) => {
 })
 
 function insertRecord(req, res) {
-    var login = new Login();
-    login.ID = req.body.ID;
-    login.Password = req.body.Password;
+    var orders = new Orders();
+    orders.Quantity = req.body.Quantity;
+    orders.Total = req.body.Total;
 
-    login.save((err, doc) => {
+    orders.save((err, doc) => {
         if (!err) {
-            res.redirect('product/list');
+            res.redirect('orders/list');
         } else {
             if (err.name == "ValidationError") {
                 handleValidationError(err, req.body);
-                res.render("login/historyLogin", {
-                    viewTitle: "Login Again",
-                    login: req.body
+                res.render("orders/addOrEditOrders", {
+                    viewTitle: "Orders Insert",
+                    orders: req.body
                 })
             }
             console.log("Error occured during record insertion" + err);
@@ -40,9 +40,9 @@ function insertRecord(req, res) {
 }
 
 router.get('/list', (req, res) => {
-    Login.find((err, docs) => {
+    Orders.find((err, docs) => {
         if (!err) {
-            res.render("login/list", {
+            res.render("orders/list", {
                 list: docs
             })
         }
@@ -53,12 +53,12 @@ router.get('/list', (req, res) => {
 function handleValidationError(err, body) {
     for (field in err.errors) {
         switch (err.errors[field].path) {
-            case 'ID':
-                body['IDError'] = err.errors[field].message;
+            case 'Quantity':
+                body['QuantityError'] = err.errors[field].message;
                 break;
 
-            case 'Password':
-                body['Password'] = err.errors[field].message;
+            case 'Total':
+                body['TotalError'] = err.errors[field].message;
                 break;
 
             default:

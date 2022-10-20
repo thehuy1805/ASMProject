@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
-var loginSchema = new mongoose.Schema({
-    ID: {
+var ordersSchema = new mongoose.Schema({
+    Quantity: {
         type: String,
         required: 'This field is required'
     },
-    Password: {
+    Total: {
         type: String,
         required: 'This field is required'
     },
-    accessTime: {
+    OrderDate: {
         type: Date,
         default: Date.now()
     }
 });
 
-mongoose.model('Login', loginSchema);
+mongoose.model('Orders', ordersSchema);
