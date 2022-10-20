@@ -9,6 +9,9 @@ mongoose.connect(url, { useNewUrlParser: true }, (err) => {
 })
 
 require('./employee.model');
+<<<<<<< HEAD
 require('./product.model');
 require('./login.model');
 require('./orders.model');
+=======
+>>>>>>> 1abc79b881ba519cd08b3223adbd57b67f91afb0
