@@ -1,9 +1,9 @@
-<h2><center> <font color="red">  {{viewTitle}}  </font></center></h2>
+<h3>{{viewTitle}}</h3>
 <form action="/login" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{login._id}}">
 
-    <div class=" form-group mr-2">
-        <div class="form-group">
+
+    <div class="form-group">
         <label>ID Login</label>
         <input type="text" class="form-control" name="ID" value="{{login.ID}}" placeholder="ID">
         <div class="text-danger">
@@ -24,6 +24,4 @@
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
         <a href="/product/list"></a>
     </div>
-    </div>
-    
 </form>

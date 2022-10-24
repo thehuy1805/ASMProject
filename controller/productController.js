@@ -22,8 +22,8 @@ function insertRecord(req, res) {
     product.ID = req.body.ID;
     product.NameProduct = req.body.NameProduct;
     product.Category = req.body.Category;
-    product.Origin = req.body.Origin;
     product.Description = req.body.Description;
+    product.Price = req.body.Price;
 
     product.save((err, doc) => {
         if (!err) {
@@ -101,8 +101,8 @@ function handleValidationError(err, body) {
                 body['NameProductError'] = err.errors[field].message;
                 break;
 
-            case 'Origin':
-                body['OriginError'] = err.errors[field].message;
+            case 'Price':
+                body['PriceError'] = err.errors[field].message;
                 break;
 
             default:

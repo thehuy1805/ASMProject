@@ -2,6 +2,7 @@
 <form action="/orders" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{orders._id}}">
 
+
     <div class="form-group">
         <label>Quantity</label>
         <input type="text" class="form-control" name="Quantity" value="{{orders.Quantity}}" placeholder="Quantity">
@@ -10,18 +11,32 @@
         </div>
     </div>
 
-    <div class="form-group">
-        <label>Total</label>
-        <input type="text" class="form-control" name="Total" value="{{orders.Total}}" placeholder="Total">
+<div class="form-group">
+        <label>Amount</label>
+        <input type="text" class="form-control" name="Amount" value="{{orders.Amount}}" placeholder="Amount">
         <div class="text-danger">
-            {{orders.TotalError}}
+            {{orders.AmountError}}
         </div>
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
-        <a href="/orders/list" class="btn btn-danger">
-            <i class="fas fa-list-alt"></i> View All
+        <label>Brand</label>
+        <input type="text" class="form-control" name="Total" value="{{orders.Brand}}" placeholder="Brand">
+        <div class="text-danger">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Employee</label>
+        <input type="text" class="form-control" name="Total" value="{{orders.Employee}}" placeholder="Employee">
+        <div class="text-danger">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger"><i class="fas fa-paper-plane"></i> Submit </button>
+        <a href="/orders/list" class="btn btn-primary">
+        <i class="fas fa-th-list"></i> View All
         </a>
     </div>
 </form>

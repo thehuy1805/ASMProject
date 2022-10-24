@@ -5,14 +5,22 @@ var ordersSchema = new mongoose.Schema({
         type: String,
         required: 'This field is required'
     },
-    Total: {
+    Amount: {
         type: String,
         required: 'This field is required'
     },
     OrderDate: {
         type: Date,
         default: Date.now()
+    },
+    Employee: {
+        type: String
+    },
+    Brand: {
+        type: String
     }
+
+
 });
 
 mongoose.model('Orders', ordersSchema);

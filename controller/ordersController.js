@@ -21,7 +21,10 @@ router.post("/", (req, res) => {
 function insertRecord(req, res) {
     var orders = new Orders();
     orders.Quantity = req.body.Quantity;
-    orders.Total = req.body.Total;
+    orders.Amount = req.body.Amount;
+    orders.Brand = req.body.Brand;
+    orders.Employee = req.body.Employee;
+
 
     orders.save((err, doc) => {
         if (!err) {
@@ -57,8 +60,8 @@ function handleValidationError(err, body) {
                 body['QuantityError'] = err.errors[field].message;
                 break;
 
-            case 'Total':
-                body['TotalError'] = err.errors[field].message;
+            case 'Amount':
+                body['AmountError'] = err.errors[field].message;
                 break;
 
             default:

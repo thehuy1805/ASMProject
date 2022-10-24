@@ -12,11 +12,7 @@ var productSchema = new mongoose.Schema({
     Category: {
         type: String
     },
-    Origin: {
-        type: String,
-        required: 'This field is required'
-    },
-    Img: {
+    Price: {
         type: String,
         required: 'This field is required'
     },

@@ -8,20 +8,15 @@
         <i class="fas fa-plus-circle"> </i> List Product
     </a>
 
-    <a href="/employee/list" class="btn btn-danger">
-        <i class="fas fa-users"> </i> List Employee
-    </a>
-
-    <a href="/login" class="btn btn-info">
-        <i class="fas fa-sign-out-alt"> </i> Log out
-    </a>
 </h3>
 
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Quantity</th>
-            <th>Total</th>
+            <th>Amount</th>
+            <th>Brand</th>
+            <th>Employee</th>
             <th>OrderDate</th>
             <th></th>
         </tr>
@@ -30,7 +25,9 @@
         {{#each list}}
         <tr>
             <td>{{this.Quantity}}</td>
-            <td>{{this.Total}}</td>
+            <td>{{this.Amount}}</td>
+            <td>{{this.Brand}}</td>
+            <td>{{this.Employee}}</td>
             <td>{{this.OrderDate}}</td>
         </tr>
         {{/each}}
