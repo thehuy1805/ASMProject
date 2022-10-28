@@ -1,13 +1,12 @@
 <h3>
-    <p>Order List</p>
-    <a href="/orders" class="btn btn-success">
-        <i class="fas fa-cart-plus"> </i> New Order
+    <p>Product List</p>
+    <a href="/product" class="btn btn-primary">
+        <i class="far fa-calendar-plus"></i> New Product
     </a>
 
-    <a href="/product/list" class="btn btn-primary">
-        <i class="fas fa-plus-circle"> </i> List Product
+    <a href="/orders/list" class="btn btn-success">
+        <i class="fas fa-stream"></i> List Order
     </a>
-
 </h3>
 
 <table class="table table-striped">
@@ -29,6 +28,8 @@
             <td>{{this.Brand}}</td>
             <td>{{this.Employee}}</td>
             <td>{{this.OrderDate}}</td>
+            
+
         </tr>
         {{/each}}
     </tbody>

@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Latest compiled and minified CSS -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <title>ATN Store</title>
-        <style>
-            html,body{
-                height:100%;
-            }
-        </style>
-    </head>
-    <body class="bg-info">
-        <div class="row h-100 align-items-center">
-            <div style="margin-left:220px;margin-right:220px;background-color:rgb(53, 236, 75);margin-top:15px;padding:20px" class="col-md-7.5 offset-md-12">
-                {{> header}}
-            </div>
-        </div>
 
-        <div class="row h-100 align-items-center">
-            <div style="margin-left:330px;background-color:rgb(205, 187, 223);margin-top:15px;padding:20px" class="col-md-6 offset-md-3">
-                {{{body}}}
-            </div>
-        </div>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>ATN Store</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+</head>
 
-        <div class="row h-100 align-items-center">
-            <div style="margin-left:220px;margin-right:220px;background-color:rgb(53, 250, 73);margin-top:15px;padding:20px" class="col-md-7.5 offset-md-12">
-                {{> footer}}
-            </div>
+<body class="bg-info">
+    <div class="row h-100 align-items-center">
+        <div style="margin-left:220px;margin-right:220px;background-color:rgb(239, 181, 35);margin-top:15px;padding:20px"
+            class="col-md-7.5 offset-md-12">
+            {{> header}}
         </div>
-         
-    </body>
+    </div>
+
+    <div class="row h-100 align-items-center">
+        <div style="margin-left:330px;background-color:rgb(190, 182, 198);margin-top:15px;padding:20px"
+            class="col-md-6 offset-md-3">
+            {{{body}}}
+        </div>
+    </div>
+
+    <div class="row h-100 align-items-center">
+        <div style="margin-left:220px;margin-right:220px;background-color:rgb(251, 198, 22);margin-top:15px;padding:20px"
+            class="col-md-7.5 offset-md-12">
+            {{> footer}}
+        </div>
+    </div>
+
+</body>
+
 </html>

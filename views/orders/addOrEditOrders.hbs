@@ -11,7 +11,7 @@
         </div>
     </div>
 
-<div class="form-group">
+    <div class="form-group">
         <label>Amount</label>
         <input type="text" class="form-control" name="Amount" value="{{orders.Amount}}" placeholder="Amount">
         <div class="text-danger">
@@ -23,6 +23,7 @@
         <label>Brand</label>
         <input type="text" class="form-control" name="Total" value="{{orders.Brand}}" placeholder="Brand">
         <div class="text-danger">
+            {{orders.BrandError}}
         </div>
     </div>
 
@@ -30,13 +31,14 @@
         <label>Employee</label>
         <input type="text" class="form-control" name="Total" value="{{orders.Employee}}" placeholder="Employee">
         <div class="text-danger">
+            {{orders.EmployeeError}}
         </div>
     </div>
 
     <div class="form-group">
         <button type="submit" class="btn btn-danger"><i class="fas fa-paper-plane"></i> Submit </button>
         <a href="/orders/list" class="btn btn-primary">
-        <i class="fas fa-th-list"></i> View All
+            <i class="fas fa-th-list"></i> View All
         </a>
     </div>
 </form>
