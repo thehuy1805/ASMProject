@@ -14,10 +14,12 @@ var ordersSchema = new mongoose.Schema({
         default: Date.now()
     },
     Employee: {
-        type: String
+        type: String,
+        required: 'This field is required'
     },
     Brand: {
-        type: String
+        type: String,
+        required: 'This field is required'
     }
 
 
